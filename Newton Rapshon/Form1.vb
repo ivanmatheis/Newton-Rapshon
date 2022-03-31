@@ -3,6 +3,7 @@ Public Class Form1
     Dim a As Single
     Dim b As Single
     Dim a1 As Single
+    Dim b1 As Single
     Dim j As Single
     Dim d As Single
     Dim i As Single
@@ -33,8 +34,11 @@ Public Class Form1
     End Function
 
     Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
-        x(i) = ta.Text
-        a1 = x(i) - 1
+        a = ta.Text
+        b = tb.Text
+        x(i) = (a + b) / 2
+        a1 = a - 1
+        b1 = b + 1
         c = tc.Text
         ec = 0.5 * 10 ^ (-c)
         redon = c + 2
@@ -47,7 +51,7 @@ Public Class Form1
         Do While err(i) > ec
 
             i = i + 1
-            x(i) = (x(i - 1)) - (f(x(i - 1)) / fd(x(i - 1)))
+            x(i) = (x(i - 1)) - f(x(i - 1)) / fd(x(i - 1))
             err(i) = Math.Abs((x(i) - x(i - 1)) / x(i))
             Salida.Rows.Add(i, Math.Round(x(i), redon), Math.Round(err(i), redon))
 
@@ -60,6 +64,7 @@ Public Class Form1
     Private Sub Limpiar_Click(sender As Object, e As EventArgs) Handles Limpiar.Click
         tf.Clear()
         ta.Clear()
+        tb.Clear()
         tc.Clear()
         Tr.Clear()
         td.Clear()
@@ -71,12 +76,10 @@ Public Class Form1
     Private Sub Graficar_Click(sender As Object, e As EventArgs) Handles Graficar.Click
         g = Graf.CreateGraphics()
         j = a1
-        Do While j <= a1
+        Do While j <= b1
             Graf.Series(0).Points.AddXY(Math.Round(j, 1), f(j))
             j = j + 0.1
-
         Loop
-
         Graf.Series(1).Points.AddXY(Math.Round(x(i), 1), f(x(i)))
     End Sub
 

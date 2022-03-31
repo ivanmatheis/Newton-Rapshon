@@ -22,10 +22,10 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Salida = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,7 +61,7 @@ Partial Class Form1
         Me.Salida.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
         Me.Salida.Location = New System.Drawing.Point(520, 31)
         Me.Salida.Name = "Salida"
-        Me.Salida.Size = New System.Drawing.Size(348, 150)
+        Me.Salida.Size = New System.Drawing.Size(342, 150)
         Me.Salida.TabIndex = 8
         '
         'Column1
@@ -213,23 +213,23 @@ Partial Class Form1
         'Graf
         '
         Me.Graf.BackColor = System.Drawing.Color.Salmon
-        ChartArea2.Name = "ChartArea1"
-        Me.Graf.ChartAreas.Add(ChartArea2)
+        ChartArea3.Name = "ChartArea1"
+        Me.Graf.ChartAreas.Add(ChartArea3)
         Me.Graf.Cursor = System.Windows.Forms.Cursors.Default
-        Legend2.Name = "Legend1"
-        Me.Graf.Legends.Add(Legend2)
+        Legend3.Name = "Legend1"
+        Me.Graf.Legends.Add(Legend3)
         Me.Graf.Location = New System.Drawing.Point(147, 287)
         Me.Graf.Name = "Graf"
-        Series3.ChartArea = "ChartArea1"
-        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series2"
-        Me.Graf.Series.Add(Series3)
-        Me.Graf.Series.Add(Series4)
+        Series5.ChartArea = "ChartArea1"
+        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series5.Legend = "Legend1"
+        Series5.Name = "Series1"
+        Series6.ChartArea = "ChartArea1"
+        Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point
+        Series6.Legend = "Legend1"
+        Series6.Name = "Series2"
+        Me.Graf.Series.Add(Series5)
+        Me.Graf.Series.Add(Series6)
         Me.Graf.Size = New System.Drawing.Size(635, 300)
         Me.Graf.TabIndex = 27
         Me.Graf.Text = "Chart1"
