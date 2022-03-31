@@ -68,6 +68,7 @@ Public Class Form1
         tc.Clear()
         Tr.Clear()
         td.Clear()
+
         Salida.Rows.Clear()
     End Sub
 
